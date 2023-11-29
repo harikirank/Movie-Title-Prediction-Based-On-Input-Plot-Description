@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>Title Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'title_predictor/title_pred.css' %}" />
+</head>
+<body>
+
+<div class="form-container">
+<h1 class="title_pred">Title Prediction from Plot</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Predict Title">
+</form>
+</div>
+</body>
+</html>
